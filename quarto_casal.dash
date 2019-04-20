@@ -1,0 +1,54 @@
+
+title: Quarto do Casal
+widget_dimensions: [155,155]
+widget_margins: [8,8]
+columns: 8
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - spacer, climatizador, off_climatizador, interruptor_quarto, painel_quarto, abajour, main_panel
+
+interruptor_quarto:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Quarto Casal
+    entity: switch.luz_quarto_casal
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+painel_quarto:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Painel Quarto
+    entity: switch.painel_quarto_casal
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+main_panel:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Menu Principal
+    icon_active: fa-home
+    icon_inactive: fa-home
+    url: /principal
+climatizador:
+    widget_type: climate
+    widget_style: "font-size: 150%"
+    title: Ar Cond
+    entity: climate.climatizador_quarto
+    step: 1
+off_climatizador:
+    widget_type: script
+    widget_style: "font-size: 150%"
+    title: Ar Cond
+    entity: script.arquarto_off
+    icon_on: mdi-fan-off
+    icon_off: mdi-fan-off
+abajour:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Abajour
+    entity: switch.sonoff_abajour
+    icon_on: mdi-lamp
+    icon_off: mdi-lamp

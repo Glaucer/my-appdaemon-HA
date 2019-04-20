@@ -1,0 +1,19 @@
+title: Quarto Enzo
+widget_dimensions: [160,160]
+widget_margins: [8,8]
+columns: 5
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - spacer, spacer, main_panel
+
+main_panel:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Menu Principal
+    icon_active: fa-home
+    icon_inactive: fa-home
+    url: /principal

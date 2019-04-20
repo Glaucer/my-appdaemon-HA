@@ -1,0 +1,69 @@
+
+title: Sala de Estar
+widget_dimensions: [160,160]
+widget_margins: [8,8]
+columns: 6
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - spacer, climatizador, off_climatizador, sanca_esquerda, sanca_direita
+    - spacer, painel_sala, sala_estar1, sala_estar2, main_panel
+
+sanca_esquerda:
+    widget_type: switch
+    widget_style: "font-size: 140%"
+    title: Sanca Esquerda
+    entity: switch.sanca_esquerda
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+sanca_direita:
+    widget_type: switch
+    widget_style: "font-size: 150%;"
+    title: Sanca Direita
+    entity: switch.sanca_direita
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+painel_sala:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Painel Sala
+    entity: switch.painel_sala
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+sala_estar1:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Sala de Estar
+    entity: switch.sala_estar1
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+sala_estar2:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Sala de Estar
+    entity: switch.sala_estar2
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+main_panel:
+    widget_type: navigate
+    widget_style: "font-size: 140%"
+    title: Menu Principal
+    icon_active: fa-home
+    icon_inactive: fa-home
+    url: /principal
+off_climatizador:
+    widget_type: script
+    widget_style: "font-size: 150%"
+    title: Ar Cond
+    entity: script.arsala_off
+    icon_on: mdi-fan-off
+    icon_off: mdi-fan-off
+climatizador:
+    widget_type: climate
+    widget_style: "font-size: 150%"
+    title: Ar Cond
+    entity: climate.climatizador_sala
+    step: 1

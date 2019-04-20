@@ -1,0 +1,108 @@
+title: House Panel
+widget_dimensions: [175,175]
+widget_margins: [8,8]
+columns: 7
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - spacer, dark_sky(2x1), clock, glaucer_position, garagem
+    - spacer, sala_estar, sala_jantar, quarto_casal, quarto_enzo, quarto_victor
+    - spacer, cozinha, office, sacada
+quarto_casal:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Quarto Casal
+    icon_active: mdi-hotel
+    icon_inactive: mdi-hotel
+    url: /quarto_casal
+sala_estar:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Sala Estar
+    icon_active: mdi-sofa
+    icon_inactive: mdi-sofa
+    url: /sala_estar
+sala_jantar:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Sala Jantar
+    icon_active: mdi-silverware
+    icon_inactive: mdi-silverware
+    url: /sala_jantar
+sacada:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Sacadas
+    icon_active: fa-tree
+    icon_inactive: fa-tree
+    url: /sacada
+cozinha:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Cozinha
+    icon_active: mdi-fridge-outline
+    icon_inactive: mdi-fridge-outline
+    url: /cozinha
+office:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Escritório
+    icon_active: mdi-office-building
+    icon_inactive: mdi-office-building
+    url: /office
+
+clock:
+    widget_type: clock
+    widget_style: "font-size: 150%"
+    time_format: "24hr"
+garagem:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Garagem
+    entity: script.garagem
+    icon_on: fa-car
+    icon_off: fa-car
+quarto_enzo:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Quarto Enzo
+    icon_active: mdi-hotel
+    icon_inactive: mdi-hotel
+    url: /quarto_enzo
+quarto_victor:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Quarto Victor
+    icon_active: mdi-hotel
+    icon_inactive: mdi-hotel
+    url: /quarto_victor
+glaucer_position:
+    widget_type: device_tracker
+    widget_style: "font-size: 150%"
+    title: Glaucer
+    device: your device_tracker
+    icon_on: fa-male
+    icon_off: fa-male
+    active_map:
+      - Home
+      - Work
+      - your zone
+dark_sky:
+    widget_type: weather
+    widget_style: "font-size: 120%"
+    title: Hoje
+    prefer_icons: 1
+    sensors:
+      icon: sensor.weather_symbol
+      temperature: sensor.weather_temperature
+      precip_probability: sensor.dark_sky_precip_probability
+      precip_intensity: sensor.dark_sky_precip_intensity
+      precip_type: sensor.weather_precipitation
+      humidity: sensor.weather_humidity
+      pressure: sensor.weather_pressure
+      wind_speed: sensor.weather_wind_speed
+      wind_bearing: sensor.dark_sky_wind_bearing
+      apparent_temperature: sensor.dark_sky_apparent_temperature

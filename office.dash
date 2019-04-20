@@ -1,0 +1,34 @@
+
+title: Office
+widget_dimensions: [160,160]
+widget_margins: [8,8]
+columns: 5
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - spacer, office_light, office_fan, main_panel
+
+office_light:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Int Escritório
+    entity: light.office_light
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+office_fan:
+    widget_type: input_select
+    widget_style: "font-size: 150%"
+    title: Vent. Escritório
+    entity: input_select.office_fan_speed
+    icon_active: mdi-fan
+    icon_inactive: mdi-fan
+main_panel:
+    widget_type: navigate
+    widget_style: "font-size: 140%"
+    title: Menu Principal
+    icon_active: fa-home
+    icon_inactive: fa-home
+    url: /principal

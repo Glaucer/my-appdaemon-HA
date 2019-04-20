@@ -1,0 +1,47 @@
+
+title: Sala de Jantar
+widget_dimensions: [160,160]
+widget_margins: [8,8]
+columns: 7
+global_parameters:
+    use_comma: 0
+    precision: 1
+    use_hass_icon: 1
+
+layout:
+    - spacer, climatizador, off_climatizador, sala_jantar, mesa_jantar, main_panel
+
+sala_jantar:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Sala de Jantar
+    entity: switch.sala_jantar
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+mesa_jantar:
+    widget_type: switch
+    widget_style: "font-size: 150%"
+    title: Mesa de Jantar
+    entity: switch.mesa_jantar
+    icon_on: mdi-lightbulb
+    icon_off: mdi-lightbulb
+main_panel:
+    widget_type: navigate
+    widget_style: "font-size: 150%"
+    title: Menu Principal
+    icon_active: fa-home
+    icon_inactive: fa-home
+    url: /principal
+climatizador:
+    widget_type: climate
+    widget_style: "font-size: 150%"
+    title: Ar Cond
+    entity: climate.climatizador_sala
+    step: 1
+off_climatizador:
+    widget_type: script
+    widget_style: "font-size: 150%"
+    title: Ar Cond
+    entity: script.arsala_off
+    icon_on: mdi-fan-off
+    icon_off: mdi-fan-off
